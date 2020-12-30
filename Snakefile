@@ -24,6 +24,15 @@ bed_table = pd.read_table(config["sample"], dtype=str).set_index(["bed"], drop=F
 
 BED = bed_table.index.get_level_values('bed').unique().tolist()
 
+##############
+# Wildcards
+##############
+wildcard_constraints:
+    sample = "[A-Za-z0-9]+"
+
+wildcard_constraints:
+    unit = "[A-Za-z0-9]+"
+
 ################## DESIRED OUTPUT ##################
 
 HEATMAP     =   expand(RESULT_DIR + "heatmap/heatmap_{samples}_{bed}.pdf", samples = SAMPLES, bed=BED)
