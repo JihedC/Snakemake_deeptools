@@ -5,7 +5,7 @@ sample: samples.tsv
 # files and directories
 working_dir: "temp/"
 result_dir: "results/"
-data_dir: "/exports/humgen/jihed/histone_2i_mesc/bigwig_rpkm/"
+data_dir: "/exports/humgen/jihed/bigwig_for_analysis/atac_data/"
 
 computeMatrix:
   binSize   : "10"
