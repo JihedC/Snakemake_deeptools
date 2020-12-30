@@ -35,7 +35,7 @@ wildcard_constraints:
 
 ################## DESIRED OUTPUT ##################
 
-HEATMAP     =   expand(RESULT_DIR + "heatmap/heatmap_{samples}_{bed}.pdf", samples = SAMPLES, bed=BED)
+HEATMAP     =   expand(RESULT_DIR + "heatmap/{bed}/heatmap_{samples}_{bed}.pdf", samples = SAMPLES, bed=BED)
 
 ################## RULE ALL ##################
 

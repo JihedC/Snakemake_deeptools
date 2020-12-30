@@ -31,7 +31,7 @@ rule plotHeatmap:
     input:
         WORKING_DIR + "Matrix_{samples}_centered_{bed}.gz"
     output:
-        RESULT_DIR + "heatmap/heatmap_{samples}_{bed}.pdf"
+        RESULT_DIR + "heatmap/{bed}/heatmap_{samples}_{bed}.pdf"
     params:
         kmeans = str(config['plotHeatmap']['kmeans']),
         color  = str(config['plotHeatmap']['color']),
