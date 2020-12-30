@@ -1,7 +1,7 @@
 rule computeMatrix:
     input:
         bigwig  = DATA_DIR + "{samples}.bw",
-        bed     = DATA_DIR + "{bed}.bed"
+        bed     = "/exports/humgen/jihed/Coordinate_TOKEEP/mm10_rm/IAP/{bed}.bed"
     output:
         WORKING_DIR + "Matrix_{samples}_centered_{bed}.gz"
     threads: 10
