@@ -1,0 +1,34 @@
+---
+units: units.tsv
+sample: samples.tsv
+
+# files and directories
+working_dir: "temp/"
+result_dir: "results/"
+data_dir: "/exports/humgen/jihed/histone_2i_mesc/bigwig_rpkm/"
+
+computeMatrix:
+  binSize   : "10"
+  upstream  : "2500"
+  downstream: "2500"
+  regionbody: "5000"
+
+plotHeatmap:
+  kmeans    : "1"
+  color     : "Reds"
+  plot      : "plot, heatmap and colorbar"    # Others options are : “plot and heatmap”, “heatmap only” and “heatmap and colorbar”
+
+bamcompare:
+  binSize: "10"
+  normalizeUsing: "RPKM"          #others choices are CPM, BPM, RPGC, None more documentation:https://deeptools.readthedocs.io/en/develop/content/tools/bamCompare.html?highlight=bamcompare
+  EFFECTIVEGENOMESIZE: '2652783500'
+  operation : "log2"              #others choices are ratio, subtract, add, mean, reciprocal_ratio, first, second more documentation:https://deeptools.readthedocs.io/en/develop/content/tools/bamCompare.html?highlight=bamcompare
+  smoothLength: "40"
+  scaleFactorsMethod: "None"       #others choices are readCount, ,SES
+  ignoreForNormalization: ""
+
+
+plotProfile:
+    kmeans : "1"                  # choose the number of kmeans to compute
+    startLabel : "start"            # default is TSS but could be anything, like "peak start"
+    endLabel : "end"              # TES is default but can be changed like for startLabel
