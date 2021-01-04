@@ -1,3 +1,6 @@
 bed	location
 Navarro	/exports/humgen/jihed/Coordinate_TOKEEP/mm10_rm/Navarro.bed
 ucsc	/exports/humgen/jihed/Coordinate_TOKEEP/mm10_rm/ucsc.bed
+smarcad1	/exports/humgen/jihed/Coordinate_TOKEEP/chip_peaks/smarcad1/smarcad1.bed
+morc3	/exports/humgen/jihed/Coordinate_TOKEEP/chip_peaks/WTMORC3_Jacobsen_peaks.sorted.bed
+Smarcad1_Trim28_Morc3	/exports/humgen/jihed/Coordinate_TOKEEP/chip_peaks/Smarcad1_Trim28_Morc3.bed
