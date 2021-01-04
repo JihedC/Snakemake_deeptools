@@ -58,8 +58,8 @@ rule computeMatrix_scale:
     threads: 32
     params:
         binSize     = str(config['computeMatrix']['binSize']),
-        afterRegion = str(config['computeMatrix']['afterRegion']),
-        beforeRegion= str(config['computeMatrix']['beforeRegion'])
+        afterRegion = str(config['computeMatrix']['upstream']),
+        beforeRegion= str(config['computeMatrix']['downstream'])
     conda:
         "envs/deeptools.yaml"
     shell:
